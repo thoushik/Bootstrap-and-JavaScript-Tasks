@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication and Division of Two Numbers</title>
+    <style type="text/css">
+        body {
+            margin: 30px;
+        }
+
+        .outer-box {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer-box">
+        <script>
+            function multiplyBy() {
+                num1 = document.getElementById("firstNumber").value;
+                num2 = document.getElementById("secondNumber").value;
+                document.getElementById("result").innerHTML = num1 * num2;
+            }
+
+            function divideBy() {
+                num1 = document.getElementById("firstNumber").value;
+                num2 = document.getElementById("secondNumber").value;
+                document.getElementById("result").innerHTML = num1 / num2;
+            }
+        </script>
+        <form>
+            <div class="form-group">
+                <label for="firstNumber">1st Number:</label>
+                <input type="text" id="firstNumber" placeholder="Enter 1st number" />
+            </div>
+
+            <div class="form-group">
+                <label for="secondNumber">2nd Number:</label>
+                <input type="text" id="secondNumber" placeholder="Enter 2nd number" />
+            </div>
+
+            <input type="button" onClick="multiplyBy()" value="Multiply" />
+            <input type="button" onClick="divideBy()" value="Divide" />
+        </form>
+
+        <p>The Result is:<br>
+            <span id="result"></span>
+        </p>
+    </div>
+</body>
+
+</html>

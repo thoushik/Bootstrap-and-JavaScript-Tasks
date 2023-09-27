@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Date and Time</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        function show_date() {
+            var in_date = new Date();
+            var str = in_date.getDate() + '/' + (in_date.getMonth() + 1) + '/' + in_date.getFullYear()
+            document.getElementById('display2').innerHTML = str
+        }
+        function show_now() {
+            var my_time = new Date();
+            document.getElementById('display').innerHTML = my_time
+        }
+    </script>
+
+</head>
+
+<body>
+    <input type=button value='Show Date' onclick="show_date();">
+    <div id=display2></div>
+    <br>
+
+    <input type=button value="Show Time" onclick="show_now();">
+    <div id=display></div>
+</body>
+
+</html>

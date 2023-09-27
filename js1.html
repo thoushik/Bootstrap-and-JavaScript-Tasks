@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Number Reversal</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    #inputNumber {
+      padding: 10px;
+      margin-right: 10px;
+    }
+
+    #output {
+      font-weight: bold;
+      color: blue;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      transition: color 0.3s ease-in-out;
+    }
+
+    #reverseButton {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    #reverseButton:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Number Reversal</h1>
+  <label for="inputNumber">Enter a number:</label>
+  <input type="number" id="inputNumber">
+  <button id="reverseButton" onclick="reverseNumber()">Reverse</button>
+  <p id="output"><span style="color: red; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);">Reversed Number:</span> <span
+      id="reversedNumber"></span></p>
+
+  <script>
+    function reverseNumber() {
+      const num = document.getElementById('inputNumber').value;
+      const reversedNum = parseFloat(num.toString().split('').reverse().join(''));
+      document.getElementById('reversedNumber').innerText = `${reversedNum}`;
+      document.getElementById('output').style.color = 'blue';
+    }
+  </script>
+</body>
+
+</html>

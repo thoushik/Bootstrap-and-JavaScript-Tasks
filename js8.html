@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Form</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background: url("bag.png");
+      padding: 0 10px;
+    }
+
+    #link {
+      text-align: center;
+    }
+
+    .wrapper {
+      max-width: 500px;
+      width: 100%;
+
+      margin: 50px auto;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.125);
+      padding: 30px;
+    }
+
+    .wrapper .title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 25px;
+      color: blue;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .wrapper .form {
+      width: 100%;
+    }
+
+    .wrapper .form .inputfield {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .wrapper .form .inputfield label {
+      width: 200px;
+      color: black;
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .wrapper .form .inputfield .input,
+    .wrapper .form .inputfield .textarea {
+      width: 100%;
+      outline: none;
+      border: 1px solid #d5dbd9;
+      font-size: 15px;
+      padding: 8px 10px;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+
+    .wrapper .form .inputfield .textarea {
+      width: 100%;
+      height: 125px;
+      resize: none;
+    }
+
+    .wrapper .form .inputfield .custom_select {
+      position: relative;
+      width: 100%;
+      height: 37px;
+    }
+
+    .wrapper .form .inputfield .custom_select:before {
+      content: "";
+      position: absolute;
+      top: 12px;
+      right: 10px;
+      border: 8px solid;
+      border-color: #d5dbd9 transparent transparent transparent;
+      pointer-events: none;
+    }
+
+    .wrapper .form .inputfield .custom_select select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      outline: none;
+      width: 100%;
+      height: 100%;
+      border: 0px;
+      padding: 8px 10px;
+      font-size: 15px;
+      border: 1px solid #d5dbd9;
+      border-radius: 3px;
+    }
+
+    .wrapper .form .inputfield .input:focus,
+    .wrapper .form .inputfield .textarea:focus,
+    .wrapper .form .inputfield .custom_select select:focus {
+      border: 1px solid #fec107;
+    }
+
+    .wrapper .form .inputfield p {
+      font-size: 14px;
+      color: #757575;
+    }
+
+    .wrapper .form .inputfield .check {
+      width: 15px;
+      height: 15px;
+      position: relative;
+      display: block;
+      cursor: pointer;
+    }
+
+    .wrapper .form .inputfield .check input[type="checkbox"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+
+    .wrapper .form .inputfield .check .checkmark {
+      width: 15px;
+      height: 15px;
+      border: 1px solid #fec107;
+      display: block;
+      position: relative;
+    }
+
+    .wrapper .form .inputfield .check .checkmark:before {
+      content: "";
+      position: absolute;
+      top: 1px;
+      left: 2px;
+      width: 5px;
+      height: 2px;
+      border: 2px solid;
+      border-color: transparent transparent #fff #fff;
+      transform: rotate(-45deg);
+      display: none;
+    }
+
+    .wrapper .form .inputfield .check input[type="checkbox"]:checked~.checkmark {
+      background: blue;
+    }
+
+    .wrapper .form .inputfield .check input[type="checkbox"]:checked~.checkmark:before {
+      display: block;
+    }
+
+    .wrapper .form .inputfield .btn {
+      width: 50%;
+      padding: 8px 10px;
+      text-align: center;
+      margin-left: 28%;
+      font-size: 15px;
+      border: 0px;
+      background: red;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 3px;
+      outline: none;
+    }
+
+    .wrapper .form .inputfield .btn:hover {
+      background: #ffd658;
+    }
+
+    .wrapper .form .inputfield:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width:420px) {
+      .wrapper .form .inputfield {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .wrapper .form .inputfield label {
+        margin-bottom: 5px;
+      }
+
+      .wrapper .form .inputfield.terms {
+        flex-direction: row;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="title">
+      Registration Form
+    </div>
+    <div class="form">
+      <div class="inputfield">
+        <label for="first_name">First Name</label>
+        <input type="text" id="first_name" class="input" placeholder="Enter your first name">
+      </div>
+      <div class="inputfield">
+        <label for="last_name">Last Name</label>
+        <input type="text" id="last_name" class="input" placeholder="Enter your last name">
+      </div>
+      <div class="inputfield">
+        <label for="email">Email Address</label>
+        <input type="text" id="email" class="input" placeholder="Enter your email">
+      </div>
+      <div class="inputfield">
+        <label for="password">Password</label>
+        <input type="password" id="password" class="input" placeholder="Enter your password">
+      </div>
+      <div class="inputfield">
+        <label for="reenter_password">Re-enter Password</label>
+        <input type="password" id="reenter_password" class="input" placeholder="Re-enter your password">
+      </div>
+      <div class="inputfield">
+        <label>Gender</label>
+        <div class="custom_select">
+          <input type="checkbox" id="male_checkbox" value="Male">
+          <label for="male_checkbox">Male</label><br>
+          <input type="checkbox" id="female_checkbox" value="Female">
+          <label for="female_checkbox">Female</label>
+        </div>
+      </div>
+      <div class="inputfield">
+        <label for="age">Age</label>
+        <input type="text" id="age" class="input" placeholder="Enter your age">
+      </div>
+
+      <div class="inputfield">
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" class="input" placeholder="Enter your phone number">
+      </div>
+      <div class="inputfield">
+        <label for="address">Address</label>
+        <textarea id="address" class="textarea" placeholder="Enter your address"></textarea>
+      </div>
+      <div class="inputfield">
+        <label for="state">State</label>
+        <input type="text" id="state" class="input" placeholder="Enter your state">
+      </div>
+      <div class="inputfield">
+        <label for="country">Country</label>
+        <select id="country">
+          <option value="">Choose your country</option>
+          <option value="India">India</option>
+          <option value="America">America</option>
+          <option value="China">China</option>
+        </select>
+      </div>
+      <div class="inputfield">
+        <label>Language - known</label>
+        <div class="custom_select">
+          <input type="checkbox" id="english_checkbox" value="English">
+          <label for="english_checkbox">English</label>
+          <input type="checkbox" id="kannada_checkbox" value="Kannada">
+          <label for="kannada_checkbox">Kannada</label>
+          <input type="checkbox" id="tamil_checkbox" value="Tamil">
+          <label for="tamil_checkbox">Tamil</label>
+        </div>
+      </div><br>
+      <div class="inputfield terms">
+        <label class="check" for="terms_checkbox">
+          <input type="checkbox" id="terms_checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <p style="color: black;">Hereby I declare all the given details are true</p>
+      </div>
+      <div class="link">
+        <p style="margin-left: 30%;">login to <a href="ethnus.com">Ethnus</a> website</p>
+      </div><br>
+      <div class="inputfield">
+        <input type="submit" value="Register" class="btn">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

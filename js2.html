@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Alphabetical Order</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #inputString {
+            padding: 10px;
+            width: 300px;
+            margin-right: 10px;
+        }
+
+        #output {
+            font-weight: bold;
+            color: blue;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            transition: color 0.3s ease-in-out;
+        }
+
+        #orderButton {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        #orderButton:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Alphabetical Order</h1>
+    <label for="inputString">Enter a string:</label>
+    <input type="text" id="inputString" placeholder="Enter a string">
+    <button id="orderButton" onclick="orderString()">Order</button>
+    <p id="output"><span style="color: red; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);">Ordered String:</span> <span
+            id="orderedString"></span></p>
+
+    <script>
+        function orderString() {
+            const inputString = document.getElementById('inputString').value;
+            const orderedString = inputString.toLowerCase().split('').sort().join('');
+            document.getElementById('orderedString').innerText = `${orderedString}`;
+            document.getElementById('output').style.color = 'blue';
+        }
+    </script>
+</body>
+
+</html>
